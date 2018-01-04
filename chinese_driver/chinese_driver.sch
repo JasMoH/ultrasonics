@@ -1,0 +1,494 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L C C2
+U 1 1 5A12E697
+P 3550 2600
+F 0 "C2" H 3575 2700 50  0000 L CNN
+F 1 ".33uF" H 3575 2500 50  0000 L CNN
+F 2 "" H 3588 2450 50  0001 C CNN
+F 3 "" H 3550 2600 50  0001 C CNN
+	1    3550 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R2
+U 1 1 5A12E754
+P 3750 2950
+F 0 "R2" V 3830 2950 50  0000 C CNN
+F 1 "47k" V 3750 2950 50  0000 C CNN
+F 2 "" V 3680 2950 50  0001 C CNN
+F 3 "" H 3750 2950 50  0001 C CNN
+	1    3750 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R1
+U 1 1 5A12E777
+P 3300 2600
+F 0 "R1" V 3380 2600 50  0000 C CNN
+F 1 "510" V 3300 2600 50  0000 C CNN
+F 2 "" V 3230 2600 50  0001 C CNN
+F 3 "" H 3300 2600 50  0001 C CNN
+	1    3300 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R3
+U 1 1 5A12E7A2
+P 6050 3300
+F 0 "R3" V 6130 3300 50  0000 C CNN
+F 1 "47k" V 6050 3300 50  0000 C CNN
+F 2 "" V 5980 3300 50  0001 C CNN
+F 3 "" H 6050 3300 50  0001 C CNN
+	1    6050 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R4
+U 1 1 5A12E7CE
+P 8850 2400
+F 0 "R4" V 8930 2400 50  0000 C CNN
+F 1 "0.51" V 8850 2400 50  0000 C CNN
+F 2 "" V 8780 2400 50  0001 C CNN
+F 3 "" H 8850 2400 50  0001 C CNN
+	1    8850 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C1
+U 1 1 5A12E9B1
+P 2950 1950
+F 0 "C1" H 2975 2050 50  0000 L CNN
+F 1 ".33uF" H 2975 1850 50  0000 L CNN
+F 2 "" H 2988 1800 50  0001 C CNN
+F 3 "" H 2950 1950 50  0001 C CNN
+	1    2950 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C4
+U 1 1 5A12E9DF
+P 7550 3250
+F 0 "C4" H 7575 3350 50  0000 L CNN
+F 1 ".33uF" H 7575 3150 50  0000 L CNN
+F 2 "" H 7588 3100 50  0001 C CNN
+F 3 "" H 7550 3250 50  0001 C CNN
+	1    7550 3250
+	0    1    1    0   
+$EndComp
+$Comp
+L C C5
+U 1 1 5A12EA15
+P 8100 3900
+F 0 "C5" H 8125 4000 50  0000 L CNN
+F 1 ".33uF" H 8125 3800 50  0000 L CNN
+F 2 "" H 8138 3750 50  0001 C CNN
+F 3 "" H 8100 3900 50  0001 C CNN
+	1    8100 3900
+	1    0    0    -1  
+$EndComp
+Text Notes 900  6150 0    60   ~ 0
+Input: 120VAC\nall caps: metalized PP film - 630 V - 5%\nall resistors: 5%\nresistors 1/4w unless marked\nmissing components not shown
+$Comp
+L Q_NPN_BCE Q1
+U 1 1 5A12EB5C
+P 3950 3350
+F 0 "Q1" H 4150 3400 50  0000 L CNN
+F 1 "d13009k" H 4150 3300 50  0000 L CNN
+F 2 "" H 4150 3450 50  0001 C CNN
+F 3 "" H 3950 3350 50  0001 C CNN
+	1    3950 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Q_NPN_BCE Q2
+U 1 1 5A12EB8F
+P 6700 3500
+F 0 "Q2" H 6900 3550 50  0000 L CNN
+F 1 "d13009k" H 6900 3450 50  0000 L CNN
+F 2 "" H 6900 3600 50  0001 C CNN
+F 3 "" H 6700 3500 50  0001 C CNN
+	1    6700 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L D D2
+U 1 1 5A12EC44
+P 1750 3850
+F 0 "D2" H 1750 3950 50  0000 C CNN
+F 1 "1N4007" H 1750 3750 50  0000 C CNN
+F 2 "" H 1750 3850 50  0001 C CNN
+F 3 "" H 1750 3850 50  0001 C CNN
+	1    1750 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L D D1
+U 1 1 5A12EC85
+P 1750 3600
+F 0 "D1" H 1750 3700 50  0000 C CNN
+F 1 "1N4007" H 1750 3500 50  0000 C CNN
+F 2 "" H 1750 3600 50  0001 C CNN
+F 3 "" H 1750 3600 50  0001 C CNN
+	1    1750 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L D D4
+U 1 1 5A12ECC7
+P 1750 4800
+F 0 "D4" H 1750 4900 50  0000 C CNN
+F 1 "1N4007" H 1750 4700 50  0000 C CNN
+F 2 "" H 1750 4800 50  0001 C CNN
+F 3 "" H 1750 4800 50  0001 C CNN
+	1    1750 4800
+	-1   0    0    1   
+$EndComp
+$Comp
+L D D3
+U 1 1 5A12ED07
+P 1750 4500
+F 0 "D3" H 1750 4600 50  0000 C CNN
+F 1 "FR107" H 1750 4400 50  0000 C CNN
+F 2 "" H 1750 4500 50  0001 C CNN
+F 3 "" H 1750 4500 50  0001 C CNN
+	1    1750 4500
+	-1   0    0    1   
+$EndComp
+$Comp
+L D D5
+U 1 1 5A12ED60
+P 1800 4250
+F 0 "D5" H 1800 4350 50  0000 C CNN
+F 1 "FR107" H 1800 4150 50  0000 C CNN
+F 2 "" H 1800 4250 50  0001 C CNN
+F 3 "" H 1800 4250 50  0001 C CNN
+	1    1800 4250
+	-1   0    0    1   
+$EndComp
+$Comp
+L C C3
+U 1 1 5A12F06F
+P 6300 3300
+F 0 "C3" H 6325 3400 50  0000 L CNN
+F 1 ".66uF" H 6325 3200 50  0000 L CNN
+F 2 "" H 6338 3150 50  0001 C CNN
+F 3 "" H 6300 3300 50  0001 C CNN
+	1    6300 3300
+	1    0    0    -1  
+$EndComp
+Text Notes 5750 3800 0    60   ~ 0
+larger cap??? value
+$Comp
+L Conn_01x02 J2
+U 1 1 5A12F395
+P 10350 3350
+F 0 "J2" H 10350 3450 50  0000 C CNN
+F 1 "output" H 10350 3150 50  0000 C CNN
+F 2 "" H 10350 3350 50  0001 C CNN
+F 3 "" H 10350 3350 50  0001 C CNN
+	1    10350 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Conn_01x02 J1
+U 1 1 5A12F444
+P 750 1950
+F 0 "J1" H 750 2050 50  0000 C CNN
+F 1 "input" H 750 1750 50  0000 C CNN
+F 2 "" H 750 1950 50  0001 C CNN
+F 3 "" H 750 1950 50  0001 C CNN
+	1    750  1950
+	-1   0    0    1   
+$EndComp
+$Comp
+L Transformer_1P_1S T1
+U 1 1 5A12F4CC
+P 1900 1850
+F 0 "T1" H 1900 2100 50  0000 C CNN
+F 1 "Transformer_1P_1S" H 1900 1550 50  0000 C CNN
+F 2 "" H 1900 1850 50  0001 C CNN
+F 3 "" H 1900 1850 50  0001 C CNN
+	1    1900 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Fuse F1
+U 1 1 5A12F708
+P 2700 1650
+F 0 "F1" V 2780 1650 50  0000 C CNN
+F 1 "Fuse" V 2625 1650 50  0000 C CNN
+F 2 "" V 2630 1650 50  0001 C CNN
+F 3 "" H 2700 1650 50  0001 C CNN
+	1    2700 1650
+	0    1    1    0   
+$EndComp
+$Comp
+L D D6
+U 1 1 5A12F8A5
+P 3150 1650
+F 0 "D6" H 3150 1750 50  0000 C CNN
+F 1 "1N4007" H 3150 1550 50  0000 C CNN
+F 2 "" H 3150 1650 50  0001 C CNN
+F 3 "" H 3150 1650 50  0001 C CNN
+	1    3150 1650
+	-1   0    0    1   
+$EndComp
+$Comp
+L L L1
+U 1 1 5A1303C2
+P 9750 3600
+F 0 "L1" V 9700 3600 50  0000 C CNN
+F 1 "L" V 9825 3600 50  0000 C CNN
+F 2 "" H 9750 3600 50  0001 C CNN
+F 3 "" H 9750 3600 50  0001 C CNN
+	1    9750 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transformer_1P_1S T3
+U 1 1 5A130486
+P 9250 4450
+F 0 "T3" H 9250 4700 50  0000 C CNN
+F 1 "Transformer_1P_1S" H 9250 4150 50  0000 C CNN
+F 2 "" H 9250 4450 50  0001 C CNN
+F 3 "" H 9250 4450 50  0001 C CNN
+	1    9250 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transformer_1P_2S T2
+U 1 1 5A13077B
+P 8300 2350
+F 0 "T2" H 8300 2850 50  0000 C CNN
+F 1 "Transformer_1P_2S" H 8300 1850 50  0000 C CNN
+F 2 "" H 8300 2350 50  0001 C CNN
+F 3 "" H 8300 2350 50  0001 C CNN
+F 4 "2.5" H 8300 2350 60  0001 C CNN "primary windings"
+F 5 "13.5" H 8300 2350 60  0001 C CNN "s1 (red) windings"
+F 6 "13.5" H 8300 2350 60  0001 C CNN "s2 (gold) windings"
+	1    8300 2350
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3750 3100 3750 3350
+Wire Wire Line
+	3750 2800 4050 2800
+Wire Wire Line
+	4050 2800 4050 3150
+Wire Wire Line
+	3300 2750 3550 2750
+Wire Wire Line
+	3300 2450 3550 2450
+Wire Wire Line
+	3550 2750 3550 3350
+Wire Wire Line
+	3550 3350 3750 3350
+Wire Wire Line
+	950  1950 950  2050
+Wire Wire Line
+	950  2050 1500 2050
+Wire Wire Line
+	950  1850 950  1650
+Wire Wire Line
+	950  1650 1500 1650
+Wire Wire Line
+	2300 1650 2550 1650
+Wire Wire Line
+	2850 1650 3000 1650
+Wire Wire Line
+	2950 1400 2950 1800
+Connection ~ 2950 1650
+Wire Wire Line
+	2950 2100 2300 2100
+Wire Wire Line
+	2300 3350 2300 2050
+Wire Wire Line
+	1600 3350 1600 3600
+Connection ~ 2300 2100
+Wire Wire Line
+	1600 4800 1400 4800
+Wire Wire Line
+	1400 4800 1400 3350
+Wire Wire Line
+	1900 3600 1900 4000
+Wire Wire Line
+	1900 4000 1650 4000
+Wire Wire Line
+	1650 4000 1650 4250
+Connection ~ 1900 3850
+Wire Wire Line
+	1600 4500 1600 4400
+Wire Wire Line
+	1950 4400 1600 4400
+Wire Wire Line
+	1950 4250 1950 4400
+Wire Wire Line
+	1900 4500 1900 4800
+Wire Wire Line
+	1900 4650 2950 4650
+Wire Wire Line
+	2950 2250 2950 5200
+Wire Wire Line
+	2950 2250 3300 2250
+Wire Wire Line
+	3300 2250 3300 1650
+Connection ~ 1900 4650
+Wire Wire Line
+	1000 3850 1000 1400
+Wire Wire Line
+	1000 1400 2950 1400
+Wire Wire Line
+	1900 3850 5000 3850
+Wire Wire Line
+	4050 3550 4050 3850
+Wire Wire Line
+	1950 4350 4450 4350
+Wire Wire Line
+	4450 4350 4450 3000
+Wire Wire Line
+	4450 3000 4050 3000
+Connection ~ 4050 3000
+Connection ~ 1950 4350
+Wire Wire Line
+	9750 3450 10150 3450
+Wire Wire Line
+	9750 3750 9750 4250
+Wire Wire Line
+	9750 4250 9650 4250
+Wire Wire Line
+	8700 3350 10150 3350
+Wire Wire Line
+	8700 2550 8700 3350
+Wire Wire Line
+	8700 2150 10700 2150
+Wire Wire Line
+	6800 4650 8850 4650
+Wire Wire Line
+	6800 3700 6800 4650
+Wire Wire Line
+	10700 2150 10700 4650
+Wire Wire Line
+	10700 4650 9650 4650
+Wire Wire Line
+	8850 2250 8850 2150
+Connection ~ 8850 2150
+Wire Wire Line
+	8850 2550 8850 2600
+Wire Wire Line
+	8850 2600 8700 2600
+Connection ~ 8700 2600
+Text Notes 7750 1650 0    60   ~ 0
+primary - 2.5 windings\nsecondaries - 13.5 windings
+Text Notes 7400 2650 0    60   ~ 0
+red secondary
+Text Notes 7350 2100 0    60   ~ 0
+gold secondary
+Wire Wire Line
+	7900 1950 7200 1950
+Wire Wire Line
+	7200 1950 7200 4050
+Wire Wire Line
+	7200 4050 6800 4050
+Connection ~ 6800 4050
+Wire Wire Line
+	6050 3450 6300 3450
+Wire Wire Line
+	6050 3150 6300 3150
+Wire Wire Line
+	6200 3450 6200 3500
+Wire Wire Line
+	6200 3500 6500 3500
+Connection ~ 6200 3450
+Wire Wire Line
+	6200 3150 6200 2250
+Wire Wire Line
+	6200 2250 7900 2250
+Connection ~ 6200 3150
+Wire Wire Line
+	3450 2450 3450 2400
+Wire Wire Line
+	3450 2400 7900 2400
+Wire Wire Line
+	7900 2400 7900 2450
+Connection ~ 3450 2450
+Wire Wire Line
+	7900 2750 7900 3750
+Wire Wire Line
+	7900 3750 8100 3750
+Wire Wire Line
+	8100 4050 8850 4050
+Wire Wire Line
+	8850 4050 8850 4250
+Wire Wire Line
+	6800 3300 6800 3250
+Wire Wire Line
+	6800 3250 7400 3250
+Wire Wire Line
+	7700 3250 7900 3250
+Connection ~ 7900 3250
+Wire Wire Line
+	7900 2900 5000 2900
+Wire Wire Line
+	5000 2900 5000 3850
+Connection ~ 4050 3850
+Connection ~ 7900 2900
+Text Notes 1450 1300 0    60   ~ 0
+1:1 isolation xformer
+Text Notes 8750 5100 0    60   ~ 0
+unknown windings\nsuspect 1:1 isolation based on \nequal winding resistance and wire diameter.
+Wire Wire Line
+	1600 3850 1000 3850
+Wire Wire Line
+	1400 3350 2300 3350
+Connection ~ 1600 3350
+Wire Wire Line
+	2950 5200 7300 5200
+Wire Wire Line
+	7300 5200 7300 3250
+Connection ~ 7300 3250
+Connection ~ 2950 4650
+$EndSCHEMATC
