@@ -81,14 +81,6 @@ F 3 "" H 6450 3050 50  0001 C CNN
 	1    6450 2850
 	-1   0    0    -1  
 $EndComp
-Wire Wire Line
-	5150 2850 5400 2850
-Wire Wire Line
-	5400 2850 5400 3300
-Wire Wire Line
-	5600 3150 5600 2850
-Wire Wire Line
-	5600 2850 6150 2850
 $Comp
 L R R?
 U 1 1 5AAD7C3B
@@ -146,17 +138,6 @@ F 3 "" H 5850 2100 50  0001 C CNN
 $EndComp
 $Comp
 L R R?
-U 1 1 5AAD7D40
-P 6350 2100
-F 0 "R?" V 6430 2100 50  0000 C CNN
-F 1 "R" V 6350 2100 50  0000 C CNN
-F 2 "" V 6280 2100 50  0001 C CNN
-F 3 "" H 6350 2100 50  0001 C CNN
-	1    6350 2100
-	0    1    1    0   
-$EndComp
-$Comp
-L R R?
 U 1 1 5AAD7D77
 P 6350 2350
 F 0 "R?" V 6430 2350 50  0000 C CNN
@@ -177,4 +158,87 @@ F 3 "" H 7100 3150 50  0001 C CNN
 	1    7100 3150
 	1    0    0    -1  
 $EndComp
+$Comp
+L GND #PWR?
+U 1 1 5AAD816F
+P 4250 3350
+F 0 "#PWR?" H 4250 3100 50  0001 C CNN
+F 1 "GND" H 4250 3200 50  0000 C CNN
+F 2 "" H 4250 3350 50  0001 C CNN
+F 3 "" H 4250 3350 50  0001 C CNN
+	1    4250 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5AAD8197
+P 6800 3500
+F 0 "#PWR?" H 6800 3250 50  0001 C CNN
+F 1 "GND" H 6800 3350 50  0000 C CNN
+F 2 "" H 6800 3500 50  0001 C CNN
+F 3 "" H 6800 3500 50  0001 C CNN
+	1    6800 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5AAD81BF
+P 7100 3500
+F 0 "#PWR?" H 7100 3250 50  0001 C CNN
+F 1 "GND" H 7100 3350 50  0000 C CNN
+F 2 "" H 7100 3500 50  0001 C CNN
+F 3 "" H 7100 3500 50  0001 C CNN
+	1    7100 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5400 2850 5150 2850
+Wire Wire Line
+	5400 2100 5400 3300
+Wire Wire Line
+	5600 2350 5600 3150
+Wire Wire Line
+	5600 2850 6150 2850
+Wire Wire Line
+	4400 2100 4700 2100
+Wire Wire Line
+	4950 2600 4950 2700
+Wire Wire Line
+	5250 2600 5400 2600
+Connection ~ 5400 2850
+Wire Wire Line
+	5900 2600 6350 2600
+Wire Wire Line
+	6350 2600 6350 2700
+Wire Wire Line
+	5000 2100 5700 2100
+Connection ~ 5600 2600
+Connection ~ 5400 2600
+Wire Wire Line
+	4550 2950 4400 2950
+Wire Wire Line
+	4400 2950 4400 2100
+Wire Wire Line
+	6900 2950 6750 2950
+Wire Wire Line
+	6900 2100 6900 2950
+Wire Wire Line
+	6900 2350 6500 2350
+Connection ~ 6900 2350
+Wire Wire Line
+	6000 2100 6900 2100
+Wire Wire Line
+	6200 2350 5600 2350
+Connection ~ 5600 2350
+Connection ~ 5400 2100
+Wire Wire Line
+	4250 3350 4250 2750
+Wire Wire Line
+	4250 2750 4550 2750
+Wire Wire Line
+	6750 2750 6800 2750
+Wire Wire Line
+	6800 2750 6800 3500
+Text Notes 4850 4000 0    60   ~ 0
+Coax jacket connects to case. should be GND
 $EndSCHEMATC
