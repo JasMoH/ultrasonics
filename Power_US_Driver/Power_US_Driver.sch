@@ -1,0 +1,180 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:switches
+LIBS:relays
+LIBS:motors
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:LIA-cache
+LIBS:power_US
+LIBS:Power_US_Driver-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Conn_Coaxial J?
+U 1 1 5AAD3631
+P 5600 3300
+F 0 "J?" H 5610 3420 50  0000 C CNN
+F 1 "Conn_Coaxial" V 5715 3300 50  0000 C CNN
+F 2 "" H 5600 3300 50  0001 C CNN
+F 3 "" H 5600 3300 50  0001 C CNN
+	1    5600 3300
+	0    1    1    0   
+$EndComp
+$Comp
+L PA341 U?
+U 1 1 5AAD7B98
+P 4850 2850
+F 0 "U?" H 4550 3100 50  0000 L CNN
+F 1 "PA341" H 4650 2850 50  0000 L CNN
+F 2 "Housings_SSOP:MSOP-8-1EP_3x3mm_Pitch0.65mm" H 4950 2300 50  0001 C CNN
+F 3 "" H 4850 3050 50  0001 C CNN
+	1    4850 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L PA341 U?
+U 1 1 5AAD7BC9
+P 6450 2850
+F 0 "U?" H 6150 3100 50  0000 L CNN
+F 1 "PA341" H 6250 2850 50  0000 L CNN
+F 2 "Housings_SSOP:MSOP-8-1EP_3x3mm_Pitch0.65mm" H 6550 2300 50  0001 C CNN
+F 3 "" H 6450 3050 50  0001 C CNN
+	1    6450 2850
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5150 2850 5400 2850
+Wire Wire Line
+	5400 2850 5400 3300
+Wire Wire Line
+	5600 3150 5600 2850
+Wire Wire Line
+	5600 2850 6150 2850
+$Comp
+L R R?
+U 1 1 5AAD7C3B
+P 5100 2600
+F 0 "R?" V 5180 2600 50  0000 C CNN
+F 1 "R" V 5100 2600 50  0000 C CNN
+F 2 "" V 5030 2600 50  0001 C CNN
+F 3 "" H 5100 2600 50  0001 C CNN
+	1    5100 2600
+	0    1    1    0   
+$EndComp
+$Comp
+L R R?
+U 1 1 5AAD7C76
+P 5750 2600
+F 0 "R?" V 5830 2600 50  0000 C CNN
+F 1 "R" V 5750 2600 50  0000 C CNN
+F 2 "" V 5680 2600 50  0001 C CNN
+F 3 "" H 5750 2600 50  0001 C CNN
+	1    5750 2600
+	0    1    1    0   
+$EndComp
+$Comp
+L R R?
+U 1 1 5AAD7CA3
+P 4250 2100
+F 0 "R?" V 4330 2100 50  0000 C CNN
+F 1 "R" V 4250 2100 50  0000 C CNN
+F 2 "" V 4180 2100 50  0001 C CNN
+F 3 "" H 4250 2100 50  0001 C CNN
+	1    4250 2100
+	0    1    1    0   
+$EndComp
+$Comp
+L R R?
+U 1 1 5AAD7CE2
+P 4850 2100
+F 0 "R?" V 4930 2100 50  0000 C CNN
+F 1 "R" V 4850 2100 50  0000 C CNN
+F 2 "" V 4780 2100 50  0001 C CNN
+F 3 "" H 4850 2100 50  0001 C CNN
+	1    4850 2100
+	0    1    1    0   
+$EndComp
+$Comp
+L R R?
+U 1 1 5AAD7D11
+P 5850 2100
+F 0 "R?" V 5930 2100 50  0000 C CNN
+F 1 "R" V 5850 2100 50  0000 C CNN
+F 2 "" V 5780 2100 50  0001 C CNN
+F 3 "" H 5850 2100 50  0001 C CNN
+	1    5850 2100
+	0    1    1    0   
+$EndComp
+$Comp
+L R R?
+U 1 1 5AAD7D40
+P 6350 2100
+F 0 "R?" V 6430 2100 50  0000 C CNN
+F 1 "R" V 6350 2100 50  0000 C CNN
+F 2 "" V 6280 2100 50  0001 C CNN
+F 3 "" H 6350 2100 50  0001 C CNN
+	1    6350 2100
+	0    1    1    0   
+$EndComp
+$Comp
+L R R?
+U 1 1 5AAD7D77
+P 6350 2350
+F 0 "R?" V 6430 2350 50  0000 C CNN
+F 1 "R" V 6350 2350 50  0000 C CNN
+F 2 "" V 6280 2350 50  0001 C CNN
+F 3 "" H 6350 2350 50  0001 C CNN
+	1    6350 2350
+	0    1    1    0   
+$EndComp
+$Comp
+L R R?
+U 1 1 5AAD7DAC
+P 7100 3150
+F 0 "R?" V 7180 3150 50  0000 C CNN
+F 1 "R" V 7100 3150 50  0000 C CNN
+F 2 "" V 7030 3150 50  0001 C CNN
+F 3 "" H 7100 3150 50  0001 C CNN
+	1    7100 3150
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
