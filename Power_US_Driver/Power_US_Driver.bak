@@ -48,8 +48,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text Notes 4850 4000 0    60   ~ 0
-Coax jacket connects to case. should be GND
 $Sheet
 S 7400 2350 1050 1300
 U 5AAD8D83
@@ -86,4 +84,15 @@ F4 "v+" I L 3850 4750 60
 F5 "v-" I L 3850 5400 60 
 F6 "Vref" I L 3850 5250 60 
 $EndSheet
+$Comp
+L Conn_01x03 J?
+U 1 1 5AAE7F4F
+P 6400 2650
+F 0 "J?" H 6400 2850 50  0000 C CNN
+F 1 "Conn_01x03" H 6400 2450 50  0000 C CNN
+F 2 "" H 6400 2650 50  0001 C CNN
+F 3 "" H 6400 2650 50  0001 C CNN
+	1    6400 2650
+	-1   0    0    1   
+$EndComp
 $EndSCHEMATC
