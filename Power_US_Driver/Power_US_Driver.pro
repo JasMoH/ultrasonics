@@ -1,4 +1,4 @@
-update=3/17/2018 11:51:17
+update=3/20/2018 12:36:32
 version=1
 last_client=kicad
 [pcbnew]
@@ -63,3 +63,4 @@ LibName31=contrib
 LibName32=valves
 LibName33=C:/Users/notav/Documents/Photoacoustic/lock_in_amplifier/LIA_Build/LIA-cache
 LibName34=C:/Users/notav/Documents/ultrasonics/power_US
+LibName35=C:/Users/notav/Documents/ultrasonics/JasMoH_Parts
