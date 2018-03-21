@@ -33,6 +33,7 @@ LIBS:contrib
 LIBS:valves
 LIBS:LIA-cache
 LIBS:power_US
+LIBS:JasMoH_Parts
 LIBS:Power_US_Driver-cache
 EELAYER 25 0
 EELAYER END
@@ -59,21 +60,19 @@ F 3 "" V 4200 3950 60  0001 C CNN
 	1    4350 3900
 	0    -1   1    0   
 $EndComp
-Text Notes 5450 3050 0    60   ~ 0
+Text Notes 5300 2950 0    60   ~ 0
 create high / low signals
-Text HLabel 3200 3200 0    60   Input ~ 0
+Text HLabel 3200 3600 0    60   Input ~ 0
 Vcc
-Text HLabel 7200 3400 2    60   Output ~ 0
+Text HLabel 8650 3350 2    60   Output ~ 0
 Hout
-Text HLabel 7200 3700 2    60   Output ~ 0
+Text HLabel 8700 4200 2    60   Output ~ 0
 Lout
-Text Notes 5550 3300 0    60   ~ 0
-amplify DDS, comparator\nlibrary manegement... ugh
 $Comp
-L R R?
+L R R5
 U 1 1 5AB00777
 P 4550 3450
-F 0 "R?" V 4630 3450 50  0000 C CNN
+F 0 "R5" V 4630 3450 50  0000 C CNN
 F 1 "0" V 4550 3450 50  0000 C CNN
 F 2 "" V 4480 3450 50  0001 C CNN
 F 3 "" H 4550 3450 50  0001 C CNN
@@ -81,22 +80,212 @@ F 3 "" H 4550 3450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R?
+L R R6
 U 1 1 5AB0079E
 P 4650 3450
-F 0 "R?" V 4730 3450 50  0000 C CNN
+F 0 "R6" V 4730 3450 50  0000 C CNN
 F 1 "0" V 4650 3450 50  0000 C CNN
 F 2 "" V 4580 3450 50  0001 C CNN
 F 3 "" H 4650 3450 50  0001 C CNN
 	1    4650 3450
 	1    0    0    -1  
 $EndComp
+Text Notes 3250 2550 0    60   ~ 0
+ACCOMATES DIFFERENCES BETWEEN MODELS
+$Comp
+L GNDD #PWR5
+U 1 1 5AB1401C
+P 5450 4300
+F 0 "#PWR5" H 5450 4050 50  0001 C CNN
+F 1 "GNDD" H 5450 4175 50  0000 C CNN
+F 2 "" H 5450 4300 50  0001 C CNN
+F 3 "" H 5450 4300 50  0001 C CNN
+	1    5450 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L GNDD #PWR4
+U 1 1 5AB14043
+P 3800 3450
+F 0 "#PWR4" H 3800 3200 50  0001 C CNN
+F 1 "GNDD" H 3800 3325 50  0000 C CNN
+F 2 "" H 3800 3450 50  0001 C CNN
+F 3 "" H 3800 3450 50  0001 C CNN
+	1    3800 3450
+	1    0    0    -1  
+$EndComp
+Text Notes 2850 5100 0    60   ~ 0
+Duino - header vs on board
+Text HLabel 5450 3200 1    60   Input ~ 0
+Vcc
+Text HLabel 6200 3200 1    60   Input ~ 0
+Vcc
+Text HLabel 5200 3200 1    60   Input ~ 0
+Vcc
+$Comp
+L R R7
+U 1 1 5AB144B5
+P 5200 3400
+F 0 "R7" V 5280 3400 50  0000 C CNN
+F 1 "R" V 5200 3400 50  0000 C CNN
+F 2 "" V 5130 3400 50  0001 C CNN
+F 3 "" H 5200 3400 50  0001 C CNN
+	1    5200 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R8
+U 1 1 5AB144D7
+P 5200 4000
+F 0 "R8" V 5280 4000 50  0000 C CNN
+F 1 "R" V 5200 4000 50  0000 C CNN
+F 2 "" V 5130 4000 50  0001 C CNN
+F 3 "" H 5200 4000 50  0001 C CNN
+	1    5200 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R9
+U 1 1 5AB14525
+P 6200 3450
+F 0 "R9" V 6280 3450 50  0000 C CNN
+F 1 "R" V 6200 3450 50  0000 C CNN
+F 2 "" V 6130 3450 50  0001 C CNN
+F 3 "" H 6200 3450 50  0001 C CNN
+	1    6200 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C5
+U 1 1 5AB14711
+P 5600 3350
+F 0 "C5" H 5625 3450 50  0000 L CNN
+F 1 "0.1U" H 5625 3250 50  0000 L CNN
+F 2 "" H 5638 3200 50  0001 C CNN
+F 3 "" H 5600 3350 50  0001 C CNN
+	1    5600 3350
+	0    1    1    0   
+$EndComp
+$Comp
+L GNDD #PWR6
+U 1 1 5AB14762
+P 5900 3350
+F 0 "#PWR6" H 5900 3100 50  0001 C CNN
+F 1 "GNDD" H 5900 3225 50  0000 C CNN
+F 2 "" H 5900 3350 50  0001 C CNN
+F 3 "" H 5900 3350 50  0001 C CNN
+	1    5900 3350
+	1    0    0    -1  
+$EndComp
+Text Notes 3200 3100 0    60   ~ 0
+DNI - only install one of these jumpers
+$Comp
+L 74LS04 U5
+U 1 1 5AB14D68
+P 7350 4200
+F 0 "U5" H 7545 4315 50  0000 C CNN
+F 1 "74LS04" H 7540 4075 50  0000 C CNN
+F 2 "" H 7350 4200 50  0001 C CNN
+F 3 "" H 7350 4200 50  0001 C CNN
+	1    7350 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L MCP6566 U4
+U 1 1 5AB13E1C
+P 5550 3700
+F 0 "U4" H 5550 3900 50  0000 L CNN
+F 1 "MCP6566" H 5550 3500 50  0000 L CNN
+F 2 "" H 5550 3300 50  0001 C CNN
+F 3 "" H 5550 3700 50  0001 C CNN
+	1    5550 3700
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	4650 3300 4550 3300
+	6200 4200 6900 4200
+Connection ~ 6200 3700
+Wire Wire Line
+	7250 3350 7250 3700
+Wire Wire Line
+	8650 3350 7250 3350
+Wire Wire Line
+	7800 4200 8700 4200
+Wire Wire Line
+	5200 3250 5200 3200
+Wire Wire Line
+	6200 3600 6200 4200
+Wire Wire Line
+	7250 3700 5850 3700
+Wire Wire Line
+	6200 3200 6200 3300
+Connection ~ 5450 3350
+Wire Wire Line
+	5900 3350 5750 3350
+Connection ~ 5450 4200
+Wire Wire Line
+	5200 4200 5450 4200
+Wire Wire Line
+	5200 4150 5200 4200
+Connection ~ 5200 3800
+Wire Wire Line
+	5250 3800 5200 3800
+Wire Wire Line
+	5200 3550 5200 3850
+Connection ~ 4650 3300
+Wire Wire Line
+	5050 3600 5250 3600
+Wire Wire Line
+	5050 3300 5050 3600
+Wire Wire Line
+	5450 3200 5450 3400
+Wire Wire Line
+	4050 3600 3200 3600
+Wire Wire Line
+	4050 3650 4050 3600
+Wire Wire Line
+	4150 3450 4150 3650
+Wire Wire Line
+	3800 3450 4150 3450
+Wire Wire Line
+	5450 4300 5450 4000
+Wire Wire Line
+	4550 3600 4550 3650
 Wire Wire Line
 	4650 3600 4650 3650
 Wire Wire Line
-	4550 3600 4550 3650
-Text Notes 4850 3600 0    60   ~ 0
-ACCOMATES DIFFERENCES BETWEEN MODELS
+	4550 3300 5050 3300
+Text Notes 6950 2550 0    60   ~ 0
+resistor values
+Text Notes 6950 2650 0    60   ~ 0
+supply voltage
+Text HLabel 7550 4500 2    60   Input ~ 0
+Vcc
+$Comp
+L C C6
+U 1 1 5AB155A5
+P 7400 4650
+F 0 "C6" H 7425 4750 50  0000 L CNN
+F 1 "0.1U" H 7425 4550 50  0000 L CNN
+F 2 "" H 7438 4500 50  0001 C CNN
+F 3 "" H 7400 4650 50  0001 C CNN
+	1    7400 4650
+	-1   0    0    1   
+$EndComp
+$Comp
+L GNDD #PWR7
+U 1 1 5AB15619
+P 7400 4900
+F 0 "#PWR7" H 7400 4650 50  0001 C CNN
+F 1 "GNDD" H 7400 4775 50  0000 C CNN
+F 2 "" H 7400 4900 50  0001 C CNN
+F 3 "" H 7400 4900 50  0001 C CNN
+	1    7400 4900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7600 4500 7400 4500
+Wire Wire Line
+	7400 4800 7400 4900
+Text Notes 4400 4650 0    60   ~ 0
+.65V MAX OUTPUT
 $EndSCHEMATC

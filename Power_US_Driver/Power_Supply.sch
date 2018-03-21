@@ -33,6 +33,7 @@ LIBS:contrib
 LIBS:valves
 LIBS:LIA-cache
 LIBS:power_US
+LIBS:JasMoH_Parts
 LIBS:Power_US_Driver-cache
 EELAYER 25 0
 EELAYER END
@@ -85,13 +86,11 @@ F 3 "" H 3300 4400 50  0001 C CNN
 $EndComp
 Text HLabel 3700 2050 2    60   Output ~ 0
 120V
-Text HLabel 1150 2000 0    60   Input ~ 0
+Text HLabel 1050 2000 0    60   Input ~ 0
 HOT
 Text HLabel 1100 3450 0    60   Input ~ 0
 Nuetral
-Text HLabel 8800 4850 0    60   Output ~ 0
-12v
-Text HLabel 8750 5350 0    60   Output ~ 0
+Text HLabel 5350 4450 2    60   Output ~ 0
 3v3
 $Comp
 L LM7805_TO220 U1
@@ -104,22 +103,16 @@ F 3 "" H 4700 4400 50  0001 C CNN
 	1    4700 4450
 	1    0    0    -1  
 $EndComp
-Text Notes 4450 5500 0    60   ~ 0
+Text Notes 5050 4600 0    60   ~ 0
 determine DDS supply voltage
 Wire Wire Line
-	1150 2000 1600 2000
-Wire Wire Line
-	1600 2000 2250 2000
+	1050 2000 2250 2000
 Wire Wire Line
 	2250 3450 2250 2600
 Wire Wire Line
-	1100 3450 1350 3450
+	1100 3450 2250 3450
 Wire Wire Line
-	1350 3450 2250 3450
-Wire Wire Line
-	2550 2300 2850 2300
-Wire Wire Line
-	2850 2300 3100 2300
+	2550 2300 3100 2300
 Wire Wire Line
 	3100 2300 3100 2050
 Wire Wire Line
@@ -127,9 +120,7 @@ Wire Wire Line
 Wire Wire Line
 	1950 2300 1950 2900
 Wire Wire Line
-	1950 2900 2850 2900
-Wire Wire Line
-	2850 2900 3700 2900
+	1950 2900 3700 2900
 Wire Wire Line
 	1700 4200 1600 4200
 Wire Wire Line
@@ -151,13 +142,9 @@ Wire Wire Line
 Wire Wire Line
 	3000 4400 3000 4900
 Wire Wire Line
-	3000 4900 4000 4900
+	3000 4900 4700 4900
 Wire Wire Line
-	4000 4900 4700 4900
-Wire Wire Line
-	3600 4400 4000 4400
-Wire Wire Line
-	4000 4400 4400 4400
+	3600 4400 4400 4400
 Wire Wire Line
 	4400 4400 4400 4450
 Wire Wire Line
@@ -198,15 +185,13 @@ Wire Wire Line
 	4000 4500 4000 4400
 Connection ~ 4000 4400
 Wire Wire Line
-	4000 4800 4000 4900
-Wire Wire Line
-	4000 4900 4000 4950
+	4000 4800 4000 4950
 Connection ~ 4000 4900
 $Comp
-L GNDPWR #PWR?
+L GNDPWR #PWR2
 U 1 1 5AB00CEA
 P 3700 2950
-F 0 "#PWR?" H 3700 2750 50  0001 C CNN
+F 0 "#PWR2" H 3700 2750 50  0001 C CNN
 F 1 "GNDPWR" H 3700 2820 50  0000 C CNN
 F 2 "" H 3700 2900 50  0001 C CNN
 F 3 "" H 3700 2900 50  0001 C CNN
@@ -216,14 +201,18 @@ $EndComp
 Wire Wire Line
 	3700 2900 3700 2950
 $Comp
-L GNDD #PWR?
+L GNDD #PWR3
 U 1 1 5AB013C1
 P 4000 4950
-F 0 "#PWR?" H 4000 4700 50  0001 C CNN
+F 0 "#PWR3" H 4000 4700 50  0001 C CNN
 F 1 "GNDD" H 4000 4825 50  0000 C CNN
 F 2 "" H 4000 4950 50  0001 C CNN
 F 3 "" H 4000 4950 50  0001 C CNN
 	1    4000 4950
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	5350 4450 5000 4450
+Text Notes 4550 4200 0    60   ~ 0
+change to lm7833
 $EndSCHEMATC
