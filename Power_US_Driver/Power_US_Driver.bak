@@ -59,6 +59,7 @@ F3 "HOT" I L 2300 2550 60
 F4 "Nuetral" I L 2300 2650 60 
 F5 "12v" O R 3350 3300 60 
 F6 "3v3" O R 3350 3600 60 
+F7 "V-" O R 3350 3100 60 
 $EndSheet
 $Sheet
 S 2500 4600 650  1050
@@ -87,6 +88,8 @@ F3 "US_POWER_OUT" O R 4850 5000 60
 F4 "HIGH_IN" I L 3850 5100 60 
 F5 "LOW_IN" I L 3850 5250 60 
 F6 "SHUTDOWN_IN" I L 3850 5550 60 
+F7 "logic_pwr" I L 3850 4850 60 
+F8 "V-" I L 3850 5400 60 
 $EndSheet
 $Comp
 L Conn_01x03 J1
@@ -150,10 +153,10 @@ Text Label 3500 3600 0    60   ~ 0
 Wire Wire Line
 	3500 3600 3350 3600
 $Comp
-L GNDD #PWR?
+L GNDD #PWR2
 U 1 1 5AB1DC44
 P 3650 5700
-F 0 "#PWR?" H 3650 5450 50  0001 C CNN
+F 0 "#PWR2" H 3650 5450 50  0001 C CNN
 F 1 "GNDD" H 3650 5575 50  0000 C CNN
 F 2 "" H 3650 5700 50  0001 C CNN
 F 3 "" H 3650 5700 50  0001 C CNN
@@ -167,10 +170,10 @@ Wire Wire Line
 Text Notes 3500 6100 0    60   ~ 0
 check if this needs a pulldown
 $Comp
-L Conn_Coaxial J?
+L Conn_Coaxial J2
 U 1 1 5AB1E9D0
 P 7050 5250
-F 0 "J?" H 7060 5370 50  0000 C CNN
+F 0 "J2" H 7060 5370 50  0000 C CNN
 F 1 "Conn_Coaxial" V 7165 5250 50  0000 C CNN
 F 2 "" H 7050 5250 50  0001 C CNN
 F 3 "" H 7050 5250 50  0001 C CNN
@@ -182,10 +185,10 @@ Wire Wire Line
 Wire Wire Line
 	7050 5000 7050 5100
 $Comp
-L GNDPWR #PWR?
+L GNDPWR #PWR3
 U 1 1 5AB1E9D9
 P 6850 5750
-F 0 "#PWR?" H 6850 5550 50  0001 C CNN
+F 0 "#PWR3" H 6850 5550 50  0001 C CNN
 F 1 "GNDPWR" H 6850 5620 50  0000 C CNN
 F 2 "" H 6850 5700 50  0001 C CNN
 F 3 "" H 6850 5700 50  0001 C CNN
@@ -194,4 +197,18 @@ F 3 "" H 6850 5700 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6350 5000 7050 5000
+Text Label 3700 3100 0    60   ~ 0
+V-
+Wire Wire Line
+	3700 3100 3350 3100
+Text Label 3650 5400 0    60   ~ 0
+V-
+Wire Wire Line
+	3650 5400 3850 5400
+Text Label 3650 4850 0    60   ~ 0
+3v3
+Wire Wire Line
+	3650 4850 3850 4850
+Text Notes 5600 3650 0    60   ~ 0
+drive topology options:\nfull wave reactify, half bridge\ntwo half wave reactify, +- fets\nPWR OP AMP
 $EndSCHEMATC
