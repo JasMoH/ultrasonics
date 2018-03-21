@@ -168,4 +168,6 @@ Connection ~ 4900 3550
 Text HLabel 6450 3200 2    60   Output ~ 0
 Vsense
 Connection ~ 3550 3200
+Text Notes 2250 4250 0    60   ~ 0
+NC on fault pin?
 $EndSCHEMATC

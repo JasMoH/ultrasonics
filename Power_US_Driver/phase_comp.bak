@@ -117,17 +117,6 @@ F 3 "" H 3050 3700 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	3050 3750 3050 3550
-$Comp
-L TEST_2P J3
-U 1 1 5AB1E44D
-P 4100 4350
-F 0 "J3" H 4100 4410 50  0000 C CNN
-F 1 "current_resistor" H 4100 4280 50  0000 C CNN
-F 2 "" H 4100 4350 50  0001 C CNN
-F 3 "" H 4100 4350 50  0001 C CNN
-	1    4100 4350
-	1    0    0    -1  
-$EndComp
 Connection ~ 3050 2650
 Text HLabel 6450 2650 2    60   Output ~ 0
 PWR_OUT
