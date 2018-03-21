@@ -59,7 +59,6 @@ F3 "HOT" I L 2300 2550 60
 F4 "Nuetral" I L 2300 2650 60 
 F5 "12v" O R 3350 3300 60 
 F6 "3v3" O R 3350 3600 60 
-F7 "V-" O R 3350 3100 60 
 $EndSheet
 $Sheet
 S 2500 4600 650  1050
@@ -77,19 +76,6 @@ F0 "phase_comp" 60
 F1 "phase_comp.sch" 60
 F2 "US_SIG" I L 5350 5000 60 
 F3 "PWR_OUT" O R 6350 5000 60 
-$EndSheet
-$Sheet
-S 3850 4600 1000 1300
-U 5AAD9099
-F0 "power_amp" 60
-F1 "power_amp.sch" 60
-F2 "v+" I L 3850 4750 60 
-F3 "US_POWER_OUT" O R 4850 5000 60 
-F4 "HIGH_IN" I L 3850 5100 60 
-F5 "LOW_IN" I L 3850 5250 60 
-F6 "SHUTDOWN_IN" I L 3850 5550 60 
-F7 "logic_pwr" I L 3850 4850 60 
-F8 "V-" I L 3850 5400 60 
 $EndSheet
 $Comp
 L Conn_01x03 J1
@@ -197,18 +183,22 @@ F 3 "" H 6850 5700 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6350 5000 7050 5000
-Text Label 3700 3100 0    60   ~ 0
-V-
-Wire Wire Line
-	3700 3100 3350 3100
-Text Label 3650 5400 0    60   ~ 0
-V-
-Wire Wire Line
-	3650 5400 3850 5400
 Text Label 3650 4850 0    60   ~ 0
 3v3
 Wire Wire Line
 	3650 4850 3850 4850
 Text Notes 5600 3650 0    60   ~ 0
 drive topology options:\nfull wave reactify, half bridge\ntwo half wave reactify, +- fets\nPWR OP AMP
+$Sheet
+S 3850 4600 1000 1300
+U 5AAD9099
+F0 "power_amp" 60
+F1 "power_amp.sch" 60
+F2 "v+" I L 3850 4750 60 
+F3 "US_POWER_OUT" O R 4850 5000 60 
+F4 "HIGH_IN" I L 3850 5100 60 
+F5 "LOW_IN" I L 3850 5250 60 
+F6 "SHUTDOWN_IN" I L 3850 5550 60 
+F7 "logic_pwr" I L 3850 4850 60 
+$EndSheet
 $EndSCHEMATC
