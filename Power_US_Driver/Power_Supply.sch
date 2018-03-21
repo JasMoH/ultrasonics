@@ -75,12 +75,12 @@ F 3 "" H 3300 4400 50  0001 C CNN
 $EndComp
 Text HLabel 3700 2000 2    60   Output ~ 0
 V+
-Text HLabel 1050 2000 0    60   Input ~ 0
-HOT
-Text HLabel 1100 3450 0    60   Input ~ 0
-Nuetral
+Text HLabel 1200 4200 0    60   Input ~ 0
+hot-120v
+Text HLabel 1150 4600 0    60   Input ~ 0
+Nuetral-120
 Text HLabel 5350 4450 2    60   Output ~ 0
-3v3
+5v
 $Comp
 L LM7805_TO220 U1
 U 1 1 5AADA773
@@ -95,15 +95,9 @@ $EndComp
 Text Notes 5050 4600 0    60   ~ 0
 determine DDS supply voltage
 Wire Wire Line
-	1600 4200 1700 4200
+	1200 4200 1700 4200
 Wire Wire Line
-	1600 1700 1600 4200
-Connection ~ 1600 2000
-Wire Wire Line
-	1700 4600 1350 4600
-Wire Wire Line
-	1350 4600 1350 3450
-Connection ~ 1350 3450
+	1150 4600 1700 4600
 Wire Wire Line
 	2500 4200 2500 4100
 Wire Wire Line
@@ -153,10 +147,10 @@ Wire Wire Line
 	4000 4800 4000 4950
 Connection ~ 4000 4900
 $Comp
-L GNDPWR #PWR4
+L GNDPWR #PWR04
 U 1 1 5AB00CEA
 P 2950 2450
-F 0 "#PWR4" H 2950 2250 50  0001 C CNN
+F 0 "#PWR04" H 2950 2250 50  0001 C CNN
 F 1 "GNDPWR" H 2950 2320 50  0000 C CNN
 F 2 "" H 2950 2400 50  0001 C CNN
 F 3 "" H 2950 2400 50  0001 C CNN
@@ -164,10 +158,10 @@ F 3 "" H 2950 2400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GNDD #PWR5
+L GNDD #PWR05
 U 1 1 5AB013C1
 P 4000 4950
-F 0 "#PWR5" H 4000 4700 50  0001 C CNN
+F 0 "#PWR05" H 4000 4700 50  0001 C CNN
 F 1 "GNDD" H 4000 4825 50  0000 C CNN
 F 2 "" H 4000 4950 50  0001 C CNN
 F 3 "" H 4000 4950 50  0001 C CNN
@@ -176,38 +170,25 @@ F 3 "" H 4000 4950 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5350 4450 5000 4450
-Text Notes 4550 4200 0    60   ~ 0
-change to lm7833
 Wire Wire Line
-	3700 2000 2550 2000
+	2250 2000 3700 2000
 Wire Wire Line
 	2950 2300 2950 2450
 Connection ~ 2950 2350
-Connection ~ 2000 3450
-Wire Wire Line
-	1100 3450 2250 3450
-Connection ~ 1600 2900
 Text Notes 2450 1300 0    60   ~ 0
 dimmer circuit for PWR CTL?
-$Comp
-L D_Bridge_+-AA D?
-U 1 1 5AB2B456
-P 2250 2000
-F 0 "D?" H 2300 2275 50  0000 L CNN
-F 1 "D_Bridge_+-AA" H 2300 2200 50  0000 L CNN
-F 2 "" H 2250 2000 50  0001 C CNN
-F 3 "" H 2250 2000 50  0001 C CNN
-	1    2250 2000
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
-	1950 2000 1950 2450
+	1000 1700 2250 1700
+Text HLabel 1000 1700 0    60   Input ~ 0
+hot-240
+Text HLabel 1150 2550 0    60   Input ~ 0
+neutral-240
 Wire Wire Line
-	1950 2450 2950 2450
+	1150 2550 2250 2550
 Wire Wire Line
-	2250 3450 2250 2300
+	2250 2550 2250 2350
 Wire Wire Line
-	2250 1700 1600 1700
+	2250 2350 2950 2350
 Wire Wire Line
-	1050 2000 1600 2000
+	2250 1700 2250 2000
 $EndSCHEMATC

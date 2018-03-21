@@ -55,10 +55,11 @@ U 5AAD8D83
 F0 "Power_Supply" 60
 F1 "Power_Supply.sch" 60
 F2 "V+" O R 3350 2700 60 
-F3 "HOT" I L 2300 2550 60 
-F4 "Nuetral" I L 2300 2650 60 
-F5 "12v" O R 3350 3300 60 
-F6 "3v3" O R 3350 3600 60 
+F3 "hot-120v" I L 2300 2550 60 
+F4 "Nuetral-120" I L 2300 2650 60 
+F5 "5v" O R 3350 3600 60 
+F6 "hot-240" I L 2300 2750 60 
+F7 "neutral-240" I L 2300 2850 60 
 $EndSheet
 $Sheet
 S 2500 4600 650  1050
@@ -74,18 +75,21 @@ S 5350 4550 1000 1050
 U 5AAD908C
 F0 "phase_comp" 60
 F1 "phase_comp.sch" 60
-F2 "US_SIG" I L 5350 5000 60 
-F3 "PWR_OUT" O R 6350 5000 60 
+F2 "PWR_OUT" O R 6350 5000 60 
+F3 "PWR_IN" I L 5350 5000 60 
+F4 "5v" I L 5350 5300 60 
+F5 "Viout" O R 6350 5350 60 
+F6 "Vsense" O R 6350 5200 60 
 $EndSheet
 $Comp
-L Conn_01x03 J1
+L Conn_01x05 J1
 U 1 1 5AAE7F4F
-P 1900 2650
-F 0 "J1" H 1900 2850 50  0000 C CNN
-F 1 "Conn_01x03" H 1900 2450 50  0000 C CNN
-F 2 "" H 1900 2650 50  0001 C CNN
-F 3 "" H 1900 2650 50  0001 C CNN
-	1    1900 2650
+P 1750 2750
+F 0 "J1" H 1750 2950 50  0000 C CNN
+F 1 "Conn_01x03" H 1750 2450 50  0000 C CNN
+F 2 "" H 1750 2750 50  0001 C CNN
+F 3 "" H 1750 2750 50  0001 C CNN
+	1    1750 2750
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
@@ -99,27 +103,18 @@ V+
 Wire Wire Line
 	3650 4750 3850 4750
 Wire Wire Line
-	2100 2550 2300 2550
-Wire Wire Line
-	2100 2650 2300 2650
-Wire Wire Line
-	2150 3000 2150 2750
-Connection ~ 2150 2750
-Wire Wire Line
 	5350 5000 4850 5000
 $Comp
-L Earth #PWR1
+L Earth #PWR01
 U 1 1 5AB015D4
-P 2150 3000
-F 0 "#PWR1" H 2150 2750 50  0001 C CNN
-F 1 "Earth" H 2150 2850 50  0001 C CNN
-F 2 "" H 2150 3000 50  0001 C CNN
-F 3 "" H 2150 3000 50  0001 C CNN
-	1    2150 3000
+P 2050 3350
+F 0 "#PWR01" H 2050 3100 50  0001 C CNN
+F 1 "Earth" H 2050 3200 50  0001 C CNN
+F 2 "" H 2050 3350 50  0001 C CNN
+F 3 "" H 2050 3350 50  0001 C CNN
+	1    2050 3350
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2150 2750 2100 2750
 Text Notes 3450 2550 0    60   ~ 0
 120V DC NOMINAL
 Wire Wire Line
@@ -133,16 +128,16 @@ decide on logic supply voltage
 Wire Wire Line
 	2250 4700 2500 4700
 Text Label 2250 4700 0    60   ~ 0
-3v3
+5v
 Text Label 3500 3600 0    60   ~ 0
-3v3
+5v
 Wire Wire Line
 	3500 3600 3350 3600
 $Comp
-L GNDD #PWR2
+L GNDD #PWR02
 U 1 1 5AB1DC44
 P 3650 5700
-F 0 "#PWR2" H 3650 5450 50  0001 C CNN
+F 0 "#PWR02" H 3650 5450 50  0001 C CNN
 F 1 "GNDD" H 3650 5575 50  0000 C CNN
 F 2 "" H 3650 5700 50  0001 C CNN
 F 3 "" H 3650 5700 50  0001 C CNN
@@ -171,10 +166,10 @@ Wire Wire Line
 Wire Wire Line
 	7050 5000 7050 5100
 $Comp
-L GNDPWR #PWR3
+L GNDPWR #PWR03
 U 1 1 5AB1E9D9
 P 6850 5750
-F 0 "#PWR3" H 6850 5550 50  0001 C CNN
+F 0 "#PWR03" H 6850 5550 50  0001 C CNN
 F 1 "GNDPWR" H 6850 5620 50  0000 C CNN
 F 2 "" H 6850 5700 50  0001 C CNN
 F 3 "" H 6850 5700 50  0001 C CNN
@@ -184,7 +179,7 @@ $EndComp
 Wire Wire Line
 	6350 5000 7050 5000
 Text Label 3650 4850 0    60   ~ 0
-3v3
+5v
 Wire Wire Line
 	3650 4850 3850 4850
 Text Notes 5600 3650 0    60   ~ 0
@@ -201,4 +196,28 @@ F5 "LOW_IN" I L 3850 5250 60
 F6 "SHUTDOWN_IN" I L 3850 5550 60 
 F7 "logic_pwr" I L 3850 4850 60 
 $EndSheet
+Text Label 5200 5300 0    60   ~ 0
+5v
+Wire Wire Line
+	5200 5300 5350 5300
+Text Notes 1400 2150 0    60   ~ 0
+external voltage boost xformer may be applied for high voltage stage
+Text Notes 5200 2350 0    60   ~ 0
+check for dumb shit w/ pwr, gnd. don't kill people
+Text Notes 6700 4750 0    60   ~ 0
+coax sheath is connected to case gnd
+Text Notes 3500 3050 0    60   ~ 0
+substantially reduces board space if large reactifier off board
+Wire Wire Line
+	1950 2550 2300 2550
+Wire Wire Line
+	1950 2650 2300 2650
+Wire Wire Line
+	1950 2750 2300 2750
+Wire Wire Line
+	1950 2850 2300 2850
+Wire Wire Line
+	2050 3350 2050 2950
+Wire Wire Line
+	2050 2950 1950 2950
 $EndSCHEMATC
